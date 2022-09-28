@@ -24,6 +24,7 @@
 		10501B7728E3E139008F478B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10501B7A28E3E139008F478B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10501B7C28E3E139008F478B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10501B8228E3E165008F478B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +41,7 @@
 		10501B6228E3E137008F478B = {
 			isa = PBXGroup;
 			children = (
+				10501B8228E3E165008F478B /* README.md */,
 				10501B6D28E3E137008F478B /* Firebase_Project */,
 				10501B6C28E3E137008F478B /* Products */,
 			);
