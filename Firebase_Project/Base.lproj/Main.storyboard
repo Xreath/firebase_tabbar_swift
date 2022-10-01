@@ -116,8 +116,8 @@
                                     <action selector="uploadAction:" destination="lJN-zQ-5fi" eventType="touchUpInside" id="eVM-7Q-EJh"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.and.pencil.and.ellipsis" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UX7-4i-Zqk">
-                                <rect key="frame" x="20" y="97" width="374" height="205"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="UX7-4i-Zqk">
+                                <rect key="frame" x="20" y="97" width="374" height="206.5"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G67-ru-4hO"/>
@@ -152,14 +152,74 @@
                     <view key="view" contentMode="scaleToFill" id="apf-L4-Am9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IsL-cG-vuq">
+                                <rect key="frame" x="0.0" y="48" width="414" height="765"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedCell" rowHeight="300" id="YIw-P7-alc" customClass="FeedTableViewCell" customModule="Firebase_Project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YIw-P7-alc" id="oGG-at-dPA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d9-dP-cZ3">
+                                                    <rect key="frame" x="20" y="268" width="79" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zc4-OQ-Bnb">
+                                                    <rect key="frame" x="20" y="48" width="374" height="206"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="374" id="RIE-II-cos"/>
+                                                        <constraint firstAttribute="height" constant="206" id="es4-ba-XlK"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrA-tu-V9P">
+                                                    <rect key="frame" x="20" y="11" width="51" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zrA-tu-V9P" firstAttribute="leading" secondItem="oGG-at-dPA" secondAttribute="leadingMargin" id="4Sc-tu-YOU"/>
+                                                <constraint firstItem="Zc4-OQ-Bnb" firstAttribute="top" secondItem="zrA-tu-V9P" secondAttribute="bottom" constant="15" id="89o-RX-Chz"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3d9-dP-cZ3" secondAttribute="bottom" constant="-1" id="EbO-iz-EHT"/>
+                                                <constraint firstItem="Zc4-OQ-Bnb" firstAttribute="leading" secondItem="3d9-dP-cZ3" secondAttribute="leading" id="IQc-1U-RDO"/>
+                                                <constraint firstItem="3d9-dP-cZ3" firstAttribute="top" secondItem="Zc4-OQ-Bnb" secondAttribute="bottom" constant="14" id="Zp2-MA-AuE"/>
+                                                <constraint firstItem="zrA-tu-V9P" firstAttribute="leading" secondItem="Zc4-OQ-Bnb" secondAttribute="leading" id="hWA-kf-tsv"/>
+                                                <constraint firstItem="zrA-tu-V9P" firstAttribute="top" secondItem="oGG-at-dPA" secondAttribute="topMargin" id="wUg-bK-er5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="3d9-dP-cZ3" id="dH4-2t-V9j"/>
+                                            <outlet property="emailLabel" destination="zrA-tu-V9P" id="BAy-QJ-1FD"/>
+                                            <outlet property="imageCell" destination="Zc4-OQ-Bnb" id="NEa-gi-BI1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GwO-7Q-siB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IsL-cG-vuq" firstAttribute="top" secondItem="GwO-7Q-siB" secondAttribute="top" id="AHq-O6-Cl5"/>
+                            <constraint firstItem="IsL-cG-vuq" firstAttribute="leading" secondItem="GwO-7Q-siB" secondAttribute="leading" id="Z1o-Jo-KNI"/>
+                            <constraint firstItem="IsL-cG-vuq" firstAttribute="bottom" secondItem="GwO-7Q-siB" secondAttribute="bottom" id="wHQ-4K-HMj"/>
+                            <constraint firstItem="IsL-cG-vuq" firstAttribute="centerX" secondItem="apf-L4-Am9" secondAttribute="centerX" id="xra-zv-N1r"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="sunrise.fill" catalog="system" id="vbQ-mP-JFa"/>
+                    <connections>
+                        <outlet property="tableView" destination="IsL-cG-vuq" id="nXI-KI-h6K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSw-no-kiQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1923" y="-332"/>
+            <point key="canvasLocation" x="1921.7391304347827" y="-332.14285714285711"/>
         </scene>
         <!--Settings-->
         <scene sceneID="56h-i9-DSw">
@@ -217,9 +277,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SelectPhoto" width="1000" height="1080"/>
         <image name="option" catalog="system" width="128" height="105"/>
         <image name="pencil.tip" catalog="system" width="99" height="128"/>
-        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="80"/>
         <image name="sunrise.fill" catalog="system" width="128" height="97"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
